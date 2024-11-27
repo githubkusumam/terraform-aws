@@ -79,8 +79,8 @@ sudo yum update -y
 sudo yum install httpd -y
 sudo systemctl start httpd
 sudo systemctl enable httpd
-echo "<h1> Welcome to AWS Terraform!!!. This Ec2 Instance is created using Terraform </h1>" >/var/www/html/index.html
-EOF
+echo "<h1> Welcome to AWS Terraform!!!. This Ec2 Instance is created using Terraform </h1>" > /var/www/html/index.html
+  EOF
   tags = {
     Name = "Apache WebServer"
   }
