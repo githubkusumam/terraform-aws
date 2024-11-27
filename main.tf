@@ -74,13 +74,13 @@ resource "aws_instance" "kusumamec2" {
   vpc_security_group_ids      = [aws_security_group.kusumam-sg.id]
   associate_public_ip_address = true
   user_data                   = <<EOF
-  #!/bin/bash
-  sudo yum update -y
-  sudo yum install httpd -y
-  sudo systemctl start httpd
-  sudo systemctl enable httpd
-  echo "<h1> Welcome to AWS Terraform!!!. This Ec2 Instance is created using Terraform </h1>" >/var/www/html/index.html
-  EOF
+#!/bin/bash
+sudo yum update -y
+sudo yum install httpd -y
+sudo systemctl start httpd
+sudo systemctl enable httpd
+echo "<h1> Welcome to AWS Terraform!!!. This Ec2 Instance is created using Terraform </h1>" >/var/www/html/index.html
+EOF
   tags = {
     Name = "Apache WebServer"
   }
