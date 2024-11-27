@@ -67,7 +67,7 @@ resource "aws_security_group" "kusumam-sg" {
 
 }
 resource "aws_instance" "kusumamec2" {
-  ami                         = "ami-012967cc5a8c9f891"
+  ami                         = "ami-0453ec754f44f9a4a"
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.kusumamsubnet.id
   key_name                    = "newkeypair"
@@ -86,3 +86,5 @@ echo "<h1> Welcome to AWS Terraform!!!. This Ec2 Instance is created using Terra
   }
 
 }
+
+
